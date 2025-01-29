@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
+</head>
+
+<body class="min-h-screen flex flex-row bg-gray-100">
+
+    <!-- sidebar -->
+
+    <div class="flex flex-col w-56 bg-blue-800  rounded-r-3xl overflow-hidden">
+        <div class="flex items-center justify-center h-20 shadow-md">
+            <h1 class="text-2xl  text-white">Tasks Manager</h1>
+        </div>
+        <ul class="flex flex-col py-4">
+            <li>
+                <a href="#"
+                    class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-white hover:text-gray-800">
+                    <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-white-400"><i
+                            class="bx bx-list-ul"></i></span>
+                    <span class="text-sm font-medium">Tasks</span>
+                </a>
+            </li>
+            <li>
+                <a href="#"
+                    class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-white hover:text-gray-800">
+                    <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-white-400"><i
+                            class="bx bx-rotate-right"></i></span>
+                    <span class="text-sm font-medium">Relaod</span>
+                </a>
+            </li>
+            <li>
+                <a href="#"
+                    class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-white hover:text-gray-800">
+                    <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-white-400"><i
+                            class="bx bxs-check-circle"></i></span>
+                    <span class="text-sm font-medium">Completed</span>
+                </a>
+            </li>
+            <li>
+                <a href="#"
+                    class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-white hover:text-gray-800">
+                    <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-white-400"><i
+                            class="bx bx-music"></i></span>
+                    <span class="text-sm font-medium">Music</span>
+                </a>
+            </li>
+            <li>
+                <a href="#"
+                    class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-white hover:text-gray-800">
+                    <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-white-400"><i
+                            class="bx bxs-cog"></i></span>
+                    <span class="text-sm font-medium">Setting</span>
+                </a>
+            </li>
+            <li>
+                <a href="#"
+                    class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-white hover:text-gray-800">
+                    <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-white-400"><i
+                            class="bx bx-user"></i></span>
+                    <span class="text-sm font-medium">Profile</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+<!-- timer card -->
+ <!-- component -->
+ <main class="flex-1 p-8">
+    <!-- Pomodoro Timer -->
+    <section class="bg-white rounded-lg shadow p-6 mb-8">
+        <div class="text-center">
+            <h2 class="text-2xl font-bold mb-4">Pomodoro Timer</h2>
+            <div class="text-6xl font-mono mb-4">25:00</div>
+            <div class="flex justify-center gap-4">
+                <button class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600">Start</button>
+                <button class="px-4 py-2 bg-gray-400 text-white rounded-lg hover:bg-gray-500">Pause</button>
+            </div>
+        </div>
+    </section>
+    <!-- Task List -->
+    <section class="bg-white rounded-lg shadow p-6">
+        <div class="flex items-center justify-between mb-4">
+            <h2 class="text-xl font-bold">Tâches</h2>
+            <div class="flex items-center space-x-2">
+                <button class=" modal-btn px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">+ Ajouter</button>
+            </div>
+        </div>
+        <div class="tasks space-y-4">
+            <!-- Task Item -->
+            <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg shadow">
+                <div>
+                    <h3 class="font-bold">Task name</h3>
+                    <span class="text-sm text-gray-500">priority : heigh</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <input type="checkbox" id="done" name="fav_language" value="done">
+                    <label for="html">Done</label><br>
+                    <button class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600"><i class='bx bxs-edit-alt'></i></button>
+                    <button class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"><i class='bx bxs-trash-alt' ></i></button>
+                </div>
+            </div>
+            <!-- Another Task Item -->
+            <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg shadow">
+                <div>
+                    <h3 class="font-bold">Task name</h3>
+                    <span class="text-sm text-gray-500">priority : heigh</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <input type="checkbox" id="done" name="fav_language" value="done">
+                    <label for="html">Done</label><br>
+                    <button class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600"><i class='bx bxs-edit-alt'></i></button>
+                    <button class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"><i class='bx bxs-trash-alt' ></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+ </main>
+
+ <!-- modal code -->
+  <div class=" modal absolute bg-gray-100 w-full h-full justify-center items-center hidden ">
+      
+     <div class="bg-blue-300 p-4 w-1/2 h-1/2 rounded-lg shadow-lg">
+        <div class="flex justify-between">
+            <h2 class="text-2xl font-bold">Add tasks</h2>
+
+            <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-white-400"><i
+                class=" close bx bx-window-close"></i>
+            </span>
+        </div>
+        
+        <input type="text" placeholder="task name" class="name border border-gray-300 rounded-lg px-3 py-2 my-2">
+        <input type="text" placeholder="task description" class="description border border-gray-300 rounded-lg px-3 py-2 my-2">
+        <div class="">
+            <select name="status" id="status"  class=" statut border border-gray-300 rounded-lg px-3 py-2">
+                <option value="to do">heigh</option>
+                <option value="in progress">moyenne</option>
+                <option value="done">low</option>
+            </select>
+            <button class="btn-click bg-blue-700 px-3 py-2 rounded-lg text-white hover:bg-blue-600 hover:text-gray-800" >click</button>    
+        </div>
+
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+
+
+</html>
