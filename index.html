@@ -39,7 +39,7 @@
                     class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-white hover:text-gray-800">
                     <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-white-400"><i
                             class="bx bxs-check-circle"></i></span>
-                    <span class="text-sm font-medium">Completed</span>
+                    <span class="done text-sm font-medium">Completed</span>
                 </a>
             </li>
             <li>
@@ -75,6 +75,11 @@
     <section class="bg-white rounded-lg shadow p-6 mb-8">
         <div class="text-center">
             <h2 class="text-2xl font-bold mb-4">Pomodoro Timer</h2>
+            <div>
+                <button class="button px-4 py-2 bg-gray-200 " id="pomodoro-session">Pomodoro</button>
+                <button class="button px-4 py-2 bg-gray-200 " id="short-break">Short Break</button>
+                <button class="button px-4 py-2 bg-gray-200 " id="long-break">Long Break</button>
+            </div>
             <div class="text-6xl font-mono mb-4">25:00</div>
             <div class="flex justify-center gap-4">
                 <button class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600">Start</button>
@@ -136,10 +141,11 @@
         <input type="text" placeholder="task name" class="name border border-gray-300 rounded-lg px-3 py-2 my-2">
         <input type="text" placeholder="task description" class="description border border-gray-300 rounded-lg px-3 py-2 my-2">
         <div class="">
-            <select name="status" id="status"  class=" statut border border-gray-300 rounded-lg px-3 py-2">
-                <option value="to do">heigh</option>
-                <option value="in progress">moyenne</option>
-                <option value="done">low</option>
+            <select name="status" id="priority-id"  class=" priority border border-gray-300 rounded-lg px-3 py-2">
+                <option>priority</option>
+                <option >heigh</option>
+                <option>moyenne</option>
+                <option>low</option>
             </select>
             <button class="btn-click bg-blue-700 px-3 py-2 rounded-lg text-white hover:bg-blue-600 hover:text-gray-800" >click</button>    
         </div>
